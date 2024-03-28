@@ -26,10 +26,11 @@ class linked:
             
         return count
     
-    def add(self, data):
+    def append(self, data):
         new_node = Node(data)
         new_node.next_node = self.head
         self.head = new_node
+
     def insert(self,data,index):
         if index == 0:
             self.add(data)
@@ -69,7 +70,7 @@ l = linked()
 i = 0
 
 for i in range(0,9):
-    l.add(i)
+    l.append(i)
     i+=1
     
-print(l)
+print(l.__repr__())
