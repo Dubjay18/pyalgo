@@ -42,6 +42,12 @@ class DoublyLinkedList:
                 current = current.next_node
         return None
 
+    def traverse(self):
+        current = self.head
+        while current:
+            print(current)
+            current = current.next_node
+
     def insert(self,data, index):
         if index == 0:
             self.add(data)
@@ -76,6 +82,18 @@ class DoublyLinkedList:
                 current = current.next_node
         return False
 
+    def reverse(self):
+        current = self.head
+        while current:
+            print(current)
+            temp = current.next_node
+            current.next_node = current.previous_node
+            current.previous_node = temp
+            if current.previous_node is None:
+                self.head = current
+            current = current.previous_node
+          
+
     def __repr__(self):
         nodes = []
         current = self.head
@@ -97,4 +115,6 @@ d.add(2)
 d.add(3)
 d.add(4)
 d.add(5)
+print(d)
+print(d.reverse())
 print(d)
