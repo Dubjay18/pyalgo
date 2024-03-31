@@ -78,6 +78,19 @@ class Linked_list:
                 current = current.next_node
 
         return current
+        
+    def reverse(self):
+        current = self.head
+        prev_node = None
+        next_node = None
+
+        while current:
+            next_node = current.next_node
+            current.next_node = prev_node
+            prev_node = current
+            current = next_node
+
+        self.head = prev_node
 
     def node_at_index(self, index):
 

@@ -85,14 +85,23 @@ class DoublyLinkedList:
     def reverse(self):
         current = self.head
         while current:
-            print(current)
             temp = current.next_node
             current.next_node = current.previous_node
             current.previous_node = temp
             if current.previous_node is None:
                 self.head = current
             current = current.previous_node
-          
+    
+    def traverse_at_index(self, index):
+        if index == 0:
+            return self.head
+        else:
+            current = self.head
+            position = 0
+            while position < index:
+                current = current.next_node
+                position += 1
+            return current
 
     def __repr__(self):
         nodes = []
