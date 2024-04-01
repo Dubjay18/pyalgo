@@ -10,7 +10,7 @@ class Node:
         return '<Node data: %s>' % self.data
 
 
-class Stack:
+class Stack_with_linked_list:
     def __init__(self):
         self.top = None
         self.size = 0
@@ -49,4 +49,11 @@ class Stack:
             current = current.next_node
         return string
 
-    
+
+stack = Stack_with_linked_list()
+stack.push(1)
+stack.push(2)
+stack.push(3)
+print(stack)
+print(stack.pop())
+print(stack)
