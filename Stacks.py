@@ -50,14 +50,14 @@ class Stack_with_linked_list:
         return string
 
 
-stack = Stack_with_linked_list()
-stack.push(1)
-stack.push(2)
-stack.push(3)
-print(stack)
-print(stack.pop())
-print(stack)
-print(stack.peek())
+# stack = Stack_with_linked_list()
+# stack.push(1)
+# stack.push(2)
+# stack.push(3)
+# print(stack)
+# print(stack.pop())
+# print(stack)
+# print(stack.peek())
 
 
 class Stack_with_array:
@@ -91,3 +91,7 @@ print(stack)
 print(stack.pop())
 print(stack)
 print(stack.peek())
+
+
+
+
