@@ -136,6 +136,21 @@ class Linked_list:
 
         return self.add(tail.data)
 
+    def setMiddleHead(self):
+        middle = self.getMiddle()
+        current = self.head
+        prev = None
+        next = None
+        if middle is self.head:
+            return None
+        while current:
+            if current.data == middle:
+                self.remove(current.data)
+                print("removed")
+                current.next_node = None
+            current = current.next_node
+        self.add(middle)
+
 
     def __repr__(self):
         nodes = []
@@ -164,6 +179,5 @@ l2.add(21)
 l2.add(4)
 print(l2)
 print(l)
-print(l.are_Identical(l2))
-print(l.move_last_to_first())
+print(l.setMiddleHead())
 print(l)
