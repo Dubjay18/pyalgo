@@ -124,6 +124,18 @@ class Linked_list:
                 position+=1
 
             return current
+    def move_last_to_first(self):
+        tail = self.head
+        current = self.head
+        while current and self.size() > 1:
+            if current.next_node.next_node is None:
+                tail = current.next_node
+                current.next_node = None
+                
+            current = current.next_node
+
+        return self.add(tail.data)
+
 
     def __repr__(self):
         nodes = []
@@ -153,3 +165,5 @@ l2.add(4)
 print(l2)
 print(l)
 print(l.are_Identical(l2))
+print(l.move_last_to_first())
+print(l)
