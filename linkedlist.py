@@ -92,6 +92,14 @@ class Linked_list:
 
         self.head = prev_node
 
+    def getMiddle(self):
+        arr = []
+      
+        if self.head is not None:
+            middleIdx = self.size() // 2
+            return self.node_at_index(middleIdx).data
+        return None
+
     def node_at_index(self, index):
 
         if index == 0:
@@ -126,5 +134,6 @@ class Linked_list:
 l = Linked_list()
 l.add(10)
 l.add(21)
-
+l.add(4)
 print(l)
+print(l.getMiddle())
