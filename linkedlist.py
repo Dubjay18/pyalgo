@@ -100,6 +100,17 @@ class Linked_list:
             return self.node_at_index(middleIdx).data
         return None
 
+    def are_Identical(self, list):
+        a = self.head
+        b = list.head
+        while a != None and b != None:
+            if a.data != b.data:
+                return False
+            a = a.next_node
+            b = b.next_node
+        return True
+
+
     def node_at_index(self, index):
 
         if index == 0:
@@ -135,5 +146,10 @@ l = Linked_list()
 l.add(10)
 l.add(21)
 l.add(4)
+l2 = Linked_list()
+l2.add(10)
+l2.add(21)
+l2.add(4)
+print(l2)
 print(l)
-print(l.getMiddle())
+print(l.are_Identical(l2))
