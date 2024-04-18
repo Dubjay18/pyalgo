@@ -68,7 +68,7 @@ class BinarySearchTree:
                 current_node = current_node.right
             else:
                 current_node = current_node.left
-        return None
+        return "Not Found"
 
     def delete(self,value):
         current_node = self.root
@@ -126,7 +126,7 @@ bin.insert(7)
 bin.insert(120)
 bin.insert(130)
 bin.insert(110)
-
+print(bin.search(110))
 print(bin)
         
 
